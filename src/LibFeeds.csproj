@@ -11,8 +11,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Libraries\LibHelper\src\LibHelper.csproj" />
-    <ProjectReference Include="..\Libraries\LibMarkup\src\LibMarkup.csproj" />
+    <ProjectReference Include="..\Modules\LibHelper\src\LibHelper.csproj" />
+    <ProjectReference Include="..\Modules\LibMarkup\src\LibMarkup.csproj" />
   </ItemGroup>
 
 </Project>
