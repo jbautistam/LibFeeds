@@ -7,6 +7,7 @@ namespace Bau.Libraries.LibFeeds.Exceptions
 	/// </summary>
 	public class FeedException : Exception
 	{   
+
 		// Enumerados
 		/// <summary>
 		///		Tipo de excepción
