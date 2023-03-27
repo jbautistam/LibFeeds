@@ -22,20 +22,12 @@ namespace Bau.Libraries.LibFeeds.Process
 		/// </summary>
 		public async Task<AtomChannel> DownloadAsync(string url)
 		{
-			AtomChannel channel = null;
+			AtomChannel channel;
 
 				// Descarga el archivo
 				try
 				{
-					string fileName = System.IO.Path.GetTempFileName();
-
-						// Descarga el archivo
-						LibHelper.Files.HelperFiles.SaveTextFile(fileName, await new HttpWebClient().HttpGetAsync(url));
-						// Carga los datos
-						if (System.IO.File.Exists(fileName))
-							channel = Load(fileName);
-						// Elimina el archivo
-						System.IO.File.Delete(fileName);
+					channel = ParseText(await new HttpWebClient().HttpGetAsync(url));
 				}
 				catch (Exception exception)
 				{
