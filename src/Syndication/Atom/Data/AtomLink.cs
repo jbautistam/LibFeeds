@@ -1,110 +1,80 @@
-﻿using System;
+﻿namespace Bau.Libraries.LibFeeds.Syndication.Atom.Data;
 
-namespace Bau.Libraries.LibFeeds.Syndication.Atom.Data
-{
+/// <summary>
+///		Datos de un vínculo para Atom
+/// </summary>
+public class AtomLink
+{ 
+	// Enumerados públicos
 	/// <summary>
-	///		Datos de un vínculo para Atom
+	///		Tipo de vínculo
 	/// </summary>
-	public class AtomLink
-	{ 
-		// Enumerados públicos
-		/// <summary>
-		///		Tipo de vínculo
-		/// </summary>
-		public enum AtomLinkType
+	public enum AtomLinkType
+	{
+		/// <summary>Desconocido. No se debería utilizar</summary>
+		Unknown,
+		/// <summary>La propia entrada</summary>
+		Self,
+		/// <summary>Una URL alternativa</summary>
+		Alternate,
+		/// <summary>Una URL a un recurso relacionado</summary>
+		Enclosure,
+		/// <summary>Un documento relacionado con la entrada</summary>
+		Related,
+		/// <summary>La fuente de la información proporcionada en la entrada</summary>
+		Via
+	}
+
+	/// <summary>
+	///		URL
+	/// </summary>
+	public string Href { get; set; } = default!;
+
+	/// <summary>
+	///		Tipo del vínculo
+	/// </summary>
+	public AtomLinkType LinkType { get; set; } = AtomLinkType.Unknown;
+
+	/// <summary>
+	///		Cadena con el tipo del vínculo
+	/// </summary>
+	public string Rel
+	{
+		get { return LinkType.ToString().ToLower(); }
+		set
 		{
-			/// <summary>Desconocido. No se debería utilizar</summary>
-			Unknown,
-			/// <summary>La propia entrada</summary>
-			Self,
-			/// <summary>Una URL alternativa</summary>
-			Alternate,
-			/// <summary>Una URL a un recurso relacionado</summary>
-			Enclosure,
-			/// <summary>Un documento relacionado con la entrada</summary>
-			Related,
-			/// <summary>La fuente de la información proporcionada en la entrada</summary>
-			Via
-		}
-
-		public AtomLink() : this(null, null, null, null) { }
-
-		public AtomLink(string strHref, string strRel, string title, string type)
-								: this(strHref, GetType(strRel), title, type) { }
-
-		public AtomLink(string strHref, AtomLinkType intLinkType, string title, string type)
-		{
-			Href = strHref;
-			LinkType = intLinkType;
-			Title = title;
-			Type = type;
-		}
-
-		/// <summary>
-		///		Obtiene el tipo de vínculo a partir de la entrada
-		/// </summary>
-		private static AtomLinkType GetType(string strRel)
-		{
-			switch (strRel)
+			switch (value)
 			{
 				case "self":
-					return AtomLinkType.Self;
+						LinkType = AtomLinkType.Self;
+					break;
 				case "alternate":
-					return AtomLinkType.Alternate;
+						LinkType = AtomLinkType.Alternate;
+					break;
 				case "enclosure":
-					return AtomLinkType.Enclosure;
+						LinkType = AtomLinkType.Enclosure;
+					break;
 				case "related":
-					return AtomLinkType.Related;
+						LinkType = AtomLinkType.Related;
+					break;
 				case "via":
-					return AtomLinkType.Via;
+						LinkType = AtomLinkType.Via;
+					break;
 				default:
-					return AtomLinkType.Self;
+						LinkType = AtomLinkType.Unknown;
+					break;
 			}
+
 		}
-
-		/// <summary>
-		///		URL
-		/// </summary>
-		public string Href { get; set; }
-
-		/// <summary>
-		///		Tipo del vínculo
-		/// </summary>
-		public AtomLinkType LinkType { get; set; }
-
-		/// <summary>
-		///		Cadena con el tipo del vínculo
-		/// </summary>
-		public string Rel
-		{
-			get
-			{
-				switch (LinkType)
-				{
-					case AtomLinkType.Self:
-						return "self";
-					case AtomLinkType.Alternate:
-						return "alternate";
-					case AtomLinkType.Enclosure:
-						return "enclosure";
-					case AtomLinkType.Related:
-						return "related";
-					case AtomLinkType.Via:
-						return "via";
-					default:
-						return null;
-				}
-			}
-		}
-
-		/// <summary>
-		///		Título
-		/// </summary>
-		public string Title { get; set; }
-
-		/// <summary>
-		///		Tipo
-		/// </summary>
-		public string Type { get; set; }
 	}
+
+	/// <summary>
+	///		Título
+	/// </summary>
+	public string Title { get; set; } = default!;
+
+	/// <summary>
+	///		Tipo
+	/// </summary>
+	public string Type { get; set; } = default!;
 }

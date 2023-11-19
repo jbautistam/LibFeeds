@@ -1,11 +1,8 @@
-﻿using System;
+﻿namespace Bau.Libraries.LibFeeds.Syndication.OPML.Data;
 
-namespace Bau.Libraries.LibFeeds.Syndication.OPML.Data
+/// <summary>
+///		Colección de <see cref="OPML"/>
+/// </summary>
+public class OPMLEntriesCollection : FeedEntriesBaseCollection<OPMLEntry>
 {
-	/// <summary>
-	///		Colección de <see cref="OPML"/>
-	/// </summary>
-	public class OPMLEntriesCollection : FeedEntriesBaseCollection<OPMLEntry>
-	{
-	}
 }

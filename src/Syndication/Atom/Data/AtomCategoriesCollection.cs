@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿namespace Bau.Libraries.LibFeeds.Syndication.Atom.Data;
 
-namespace Bau.Libraries.LibFeeds.Syndication.Atom.Data
+/// <summary>
+///		Colección de <see cref="AtomCategory"/>
+/// </summary>
+public class AtomCategoriesCollection : List<AtomCategory>
 {
-	/// <summary>
-	///		Colección de <see cref="AtomCategory"/>
-	/// </summary>
-	public class AtomCategoriesCollection : List<AtomCategory>
-	{
-	}
 }

@@ -1,56 +1,53 @@
-﻿using System;
+﻿namespace Bau.Libraries.LibFeeds.Syndication.Atom;
 
-namespace Bau.Libraries.LibFeeds.Syndication.Atom
-{
-	/// <summary>
-	///		Etiquetas de un archivo Atom
-	/// </summary>
-	internal static class AtomConstTags
-	{ 
-		// Constantes para los datos del canal
-		internal const string cnstStrChannelRoot = "feed";
-		internal const string cnstStrChannelId = "id";
-		internal const string cnstStrChannelTitle = "title";
-		internal const string cnstStrChannelTagline = "tagline";
-		internal const string cnstStrChannelGenerator = "generator";
-		internal const string cnstStrChannelConvertLineBreaks = "convertLineBreaks";
-		internal const string cnstStrChannelInfo = "info";
-		internal const string cnstStrChannelCategory = "category";
-		internal const string cnsticon = "icon";
-		internal const string cnstStrLogo = "logo";
-		internal const string cnstStrRights = "rights";
-		internal const string cnstsubTitle = "subtitle";
-		// Constantes para la raíz de una entrada
-		internal const string cnstStrItemRoot = "entry";
-		// Constantes para los elementos de una entrada
-		internal const string cnstStrItemID = "id";
-		internal const string cnstStrItemTitle = "title";
-		internal const string cnstStrItemContent = "content";
-		internal const string cnstStrItemIssued = "issued";
-		internal const string cnstStrItemModified = "modified";
-		internal const string cnstStrItemCreated = "created";
-		internal const string cnstStrItemUpdated = "updated";
-		internal const string cnstStrItemPublished = "published";
-		internal const string cnstStrItemLink = "link";
-		internal const string cnstStrItemAuthor = "author";
-		internal const string cnstStrItemContributor = "contributor";
-		internal const string cnstStrSummary = "summary";
-		internal const string cnstsource = "source";
-		// Constantes con las etiquetas de una persona
-		internal const string cnstStrItemPeopleName = "name";
-		internal const string cnstStrItemPeopleUrl = "uri";
-		internal const string cnstStrItemPeopleEMail = "email";
-		// Constantes para los atributos
-		internal const string cnstStrAttrURL = "url";
-		internal const string cnstStrAttrVersion = "version";
-		internal const string cnstStrAttrLanguage = "xml:lang";
-		internal const string cnstStrAttrMode = "mode";
-		internal const string cnstStrAttrType = "type";
-		internal const string cnstStrAttrXMLNS = "xmlns";
-		internal const string cnstStrAttrXMLBase = "xml:base";
-		internal const string cnstStrAttrHref = "href";
-		internal const string cnstStrAttrRel = "rel";
-		internal const string cnstStrAttrTitle = "title";
-		internal const string cnstStrAttrTerm = "term";
-	}
+/// <summary>
+///		Etiquetas de un archivo Atom
+/// </summary>
+internal static class AtomConstTags
+{ 
+	// Constantes para los datos del canal
+	internal const string ChannelRoot = "feed";
+	internal const string ChannelId = "id";
+	internal const string ChannelTitle = "title";
+	internal const string ChannelTagline = "tagline";
+	internal const string ChannelGenerator = "generator";
+	internal const string ChannelConvertLineBreaks = "convertLineBreaks";
+	internal const string ChannelInfo = "info";
+	internal const string ChannelCategory = "category";
+	internal const string cnsticon = "icon";
+	internal const string Logo = "logo";
+	internal const string Rights = "rights";
+	internal const string cnstsubTitle = "subtitle";
+	// Constantes para la raíz de una entrada
+	internal const string ItemRoot = "entry";
+	// Constantes para los elementos de una entrada
+	internal const string ItemID = "id";
+	internal const string ItemTitle = "title";
+	internal const string ItemContent = "content";
+	internal const string ItemIssued = "issued";
+	internal const string ItemModified = "modified";
+	internal const string ItemCreated = "created";
+	internal const string ItemUpdated = "updated";
+	internal const string ItemPublished = "published";
+	internal const string ItemLink = "link";
+	internal const string ItemAuthor = "author";
+	internal const string ItemContributor = "contributor";
+	internal const string Summary = "summary";
+	internal const string cnstsource = "source";
+	// Constantes con las etiquetas de una persona
+	internal const string ItemPeopleName = "name";
+	internal const string ItemPeopleUrl = "uri";
+	internal const string ItemPeopleEMail = "email";
+	// Constantes para los atributos
+	internal const string AttrURL = "url";
+	internal const string AttrVersion = "version";
+	internal const string AttrLanguage = "xml:lang";
+	internal const string AttrMode = "mode";
+	internal const string AttrType = "type";
+	internal const string AttrXMLNS = "xmlns";
+	internal const string AttrXMLBase = "xml:base";
+	internal const string AttrHref = "href";
+	internal const string AttrRel = "rel";
+	internal const string AttrTitle = "title";
+	internal const string AttrTerm = "term";
 }

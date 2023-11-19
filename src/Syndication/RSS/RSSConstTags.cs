@@ -1,48 +1,45 @@
-﻿using System;
+﻿namespace Bau.Libraries.LibFeeds.Syndication.RSS;
 
-namespace Bau.Libraries.LibFeeds.Syndication.RSS
-{
-	/// <summary>
-	///		Etiquetas de un archivo RSS
-	/// </summary>
-	internal static class RSSConstTags
-	{	
-		// Constantes con el nombre del nodo base
-		internal const string cnstStrRoot = "rss";
-		// Constantes con el nombre de la raíz del canal
-		internal const string cnstStrChannel = "channel";
-		// Constantes del canal
-		internal const string cnstStrChannelTitle = "title";
-		internal const string cnstStrChannelDescription = "description";
-		internal const string cnstStrChannelLink = "link";
-		internal const string cnstStrChannelLanguage = "language";
-		internal const string cnstStrChannelCopyright = "copyright";
-		internal const string cnstStrChannelPubDate = "pubDate";
-		internal const string cnstStrChannelLastBuildDate = "lastBuildDate";
-		internal const string cnstStrChannelManagingEditor = "managingEditor";
-		internal const string cnstStrChannelManagingWebMaster = "webMaster";
-		internal const string cnstStrChannelGenerator = "generator";
-		// Constantes de la imagen del canal
-		internal const string cnstStrChannelImage = "image";
-		internal const string cnstStrChannelImageUrl = "url";
-		internal const string cnstStrChannelImageTitle = "title";
-		internal const string cnstStrChannelImageLink = "link";
-		// Constantes con el nombre de la raíz del elemento
-		internal const string cnstStrItem = "item";
-		// Constantes con el nombre de la raíz del elemento
-		internal const string cnstStrItemTitle = "title";
-		internal const string cnstStrItemLink = "link";
-		internal const string cnstStrItemDescription = "description";
-		internal const string cnstStrItemCategory = "category"; // .. puede haber más de una
-		internal const string cnstStrItemPubDate = "pubDate";
-		internal const string cnstStrItemGuid = "guid";
-		internal const string cnstStrItemEnclosure = "enclosure"; // ... puede haber más de uno
-		internal const string cnstStrItemAuthor = "author"; // ... puede haber más de uno
-		// Constantes con los atributos del GUID de un elemento
-		internal const string cnstStrItemAttrPermaLink = "isPermaLink"; // ...  atributo de GUID
-		// Constantes con los atributos del enclosure de un elemento
-		internal const string cnstStrItemAttrUrl = "url"; // ...  atributo de enclosure
-		internal const string cnstStrItemAttrLength = "length"; // ...  atributo de enclosure
-		internal const string cnstStrItemAttrType = "type"; // ...  atributo de enclosure
-	}
+/// <summary>
+///		Etiquetas de un archivo RSS
+/// </summary>
+internal static class RSSConstTags
+{	
+	// Constantes con el nombre del nodo base
+	internal const string Root = "rss";
+	// Constantes con el nombre de la raíz del canal
+	internal const string Channel = "channel";
+	// Constantes del canal
+	internal const string ChannelTitle = "title";
+	internal const string ChannelDescription = "description";
+	internal const string ChannelLink = "link";
+	internal const string ChannelLanguage = "language";
+	internal const string ChannelCopyright = "copyright";
+	internal const string ChannelPubDate = "pubDate";
+	internal const string ChannelLastBuildDate = "lastBuildDate";
+	internal const string ChannelManagingEditor = "managingEditor";
+	internal const string ChannelManagingWebMaster = "webMaster";
+	internal const string ChannelGenerator = "generator";
+	// Constantes de la imagen del canal
+	internal const string ChannelImage = "image";
+	internal const string ChannelImageUrl = "url";
+	internal const string ChannelImageTitle = "title";
+	internal const string ChannelImageLink = "link";
+	// Constantes con el nombre de la raíz del elemento
+	internal const string Item = "item";
+	// Constantes con el nombre de la raíz del elemento
+	internal const string ItemTitle = "title";
+	internal const string ItemLink = "link";
+	internal const string ItemDescription = "description";
+	internal const string ItemCategory = "category"; // .. puede haber más de una
+	internal const string ItemPubDate = "pubDate";
+	internal const string ItemGuid = "guid";
+	internal const string ItemEnclosure = "enclosure"; // ... puede haber más de uno
+	internal const string ItemAuthor = "author"; // ... puede haber más de uno
+	// Constantes con los atributos del GUID de un elemento
+	internal const string ItemAttrPermaLink = "isPermaLink"; // ...  atributo de GUID
+	// Constantes con los atributos del enclosure de un elemento
+	internal const string ItemAttrUrl = "url"; // ...  atributo de enclosure
+	internal const string ItemAttrLength = "length"; // ...  atributo de enclosure
+	internal const string ItemAttrType = "type"; // ...  atributo de enclosure
 }

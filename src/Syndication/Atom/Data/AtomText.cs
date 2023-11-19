@@ -1,50 +1,32 @@
-﻿using System;
+﻿namespace Bau.Libraries.LibFeeds.Syndication.Atom.Data;
 
-namespace Bau.Libraries.LibFeeds.Syndication.Atom.Data
+/// <summary>
+///		Clase con los datos de un texto para Atom
+/// </summary>
+public class AtomText
 {
 	/// <summary>
-	///		Clase con los datos de un texto para Atom
+	///		Modo (escaped, xml, ...)
 	/// </summary>
-	public class AtomText
-	{
-		public AtomText() : this(null, null, null, null, null) { }
+	public string Mode { get; set; } = default!;
 
-		public AtomText(string strMode, string type, string content) : this(strMode, type, null, null, content)
-		{
-		}
+	/// <summary>
+	///		Tipo (text/html ...)
+	/// </summary>
+	public string Type { get; set; } = default!;
 
-		public AtomText(string strMode, string type, string language, string strXMLBase, string content)
-		{
-			Mode = strMode;
-			Type = type;
-			Language = language;
-			XmlBase = strXMLBase;
-			Content = content;
-		}
+	/// <summary>
+	///		Idioma (en-US ...)
+	/// </summary>
+	public string Language { get; set; } = default!;
 
-		/// <summary>
-		///		Modo (escaped, xml, ...)
-		/// </summary>
-		public string Mode { get; set; }
+	/// <summary>
+	///		XML base
+	/// </summary>
+	public string XmlBase { get; set; } = default!;
 
-		/// <summary>
-		///		Tipo (text/html ...)
-		/// </summary>
-		public string Type { get; set; }
-
-		/// <summary>
-		///		Idioma (en-US ...)
-		/// </summary>
-		public string Language { get; set; }
-
-		/// <summary>
-		///		XML base
-		/// </summary>
-		public string XmlBase { get; set; }
-
-		/// <summary>
-		///		Contenido
-		/// </summary>
-		public string Content { get; set; }
-	}
+	/// <summary>
+	///		Contenido
+	/// </summary>
+	public string Content { get; set; } = default!;
 }

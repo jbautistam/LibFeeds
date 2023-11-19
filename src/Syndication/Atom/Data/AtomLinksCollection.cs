@@ -1,26 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
+﻿namespace Bau.Libraries.LibFeeds.Syndication.Atom.Data;
 
-namespace Bau.Libraries.LibFeeds.Syndication.Atom.Data
+/// <summary>
+///		Colección de <see cref="AtomLink"/>
+/// </summary>
+public class AtomLinksCollection : List<AtomLink>
 {
 	/// <summary>
-	///		Colección de <see cref="AtomLink"/>
+	///		Obtiene una colección con los vínculos de un tipo
 	/// </summary>
-	public class AtomLinksCollection : List<AtomLink>
+	public AtomLinksCollection Search(AtomLink.AtomLinkType linkType)
 	{
-		/// <summary>
-		///		Obtiene una colección con los vínculos de un tipo
-		/// </summary>
-		public AtomLinksCollection Search(AtomLink.AtomLinkType intLinkType)
-		{
-			AtomLinksCollection objColLinks = new AtomLinksCollection();
+		AtomLinksCollection links = new();
 
-				// Busca en la colección
-				foreach (AtomLink link in this)
-					if (link.LinkType == intLinkType)
-						objColLinks.Add(link);
-				// Devuelve la colección de vínculos encontrados
-				return objColLinks;
-		}
+			// Busca en la colección
+			foreach (AtomLink link in this)
+				if (link.LinkType == linkType)
+					links.Add(link);
+			// Devuelve la colección de vínculos encontrados
+			return links;
 	}
 }

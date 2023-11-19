@@ -1,22 +1,12 @@
-﻿using System;
+﻿namespace Bau.Libraries.LibFeeds.Syndication.Atom.Data;
 
-namespace Bau.Libraries.LibFeeds.Syndication.Atom.Data
+/// <summary>
+///		Datos de una categoría para Atom
+/// </summary>
+public class AtomCategory
 {
 	/// <summary>
-	///		Datos de una categoría para Atom
+	///		Nombre de la categoría
 	/// </summary>
-	public class AtomCategory
-	{
-		public AtomCategory() : this(null) { }
-
-		public AtomCategory(string name)
-		{
-			Name = name;
-		}
-
-		/// <summary>
-		///		Nombre de la categoría
-		/// </summary>
-		public string Name { get; set; }
-	}
+	public string Name { get; set; } = default!;
 }

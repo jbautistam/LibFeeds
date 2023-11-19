@@ -1,28 +1,17 @@
-﻿using System;
+﻿namespace Bau.Libraries.LibFeeds.Syndication.RSS.Data;
 
-namespace Bau.Libraries.LibFeeds.Syndication.RSS.Data
+/// <summary>
+///		Datos del GUID de un elemento RSS
+/// </summary>
+public class RSSGuid
 {
 	/// <summary>
-	///		Datos del GUID de un elemento RSS
+	///		ID del elemeto
 	/// </summary>
-	public class RSSGuid
-	{
-		public RSSGuid() : this(null, false) { }
+	public string ID { get; set; } = Guid.NewGuid().ToString();
 
-		public RSSGuid(string id, bool blnIsPermalink)
-		{
-			ID = id;
-			IsPermaLink = blnIsPermalink;
-		}
-
-		/// <summary>
-		///		ID del elemeto
-		/// </summary>
-		public string ID { get; set; }
-
-		/// <summary>
-		///		Atributo que indica si es permanente
-		/// </summary>
-		public bool IsPermaLink { get; set; }
-	}
+	/// <summary>
+	///		Atributo que indica si es permanente
+	/// </summary>
+	public bool IsPermaLink { get; set; }
 }

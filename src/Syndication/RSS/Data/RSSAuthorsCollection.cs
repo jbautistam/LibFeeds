@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿namespace Bau.Libraries.LibFeeds.Syndication.RSS.Data;
 
-namespace Bau.Libraries.LibFeeds.Syndication.RSS.Data
+/// <summary>
+///		Colección de <see cref="RSSItemAuthor"/>
+/// </summary>
+public class RSSAuthorsCollection : List<RSSAuthor>
 {
-	/// <summary>
-	///		Colección de <see cref="RSSItemAuthor"/>
-	/// </summary>
-	public class RSSAuthorsCollection : List<RSSAuthor>
-	{
-	}
 }
