@@ -9,6 +9,32 @@ public class AtomEntry : FeedEntryBase
 	private string _id = string.Empty;
 
 	/// <summary>
+	///		Obtiene la primera fecha de la entrada
+	/// </summary>
+	public DateTime GetFirstDate()
+	{
+		DateTime date = DateTime.UtcNow.AddYears(-10);
+
+			// Obtiene la fecha mínima
+			//date = GetMin(date, DateCreated);
+			//date = GetMin(date, DateIssued);
+			//date = GetMin(date, DateModified);
+			//date = GetMin(date, DateUpdated);
+			date = GetMin(date, DatePublished);
+			// Devuelve la fecha localizada
+			return date;
+
+		// Obtiene la fecha mínima
+		DateTime GetMin(DateTime first, DateTime second)
+		{
+			if (first < second)
+				return first;
+			else
+				return second;
+		}
+	}
+
+	/// <summary>
 	///		ID
 	/// </summary>
 	public override string ID
@@ -18,10 +44,10 @@ public class AtomEntry : FeedEntryBase
 			// Si no existía un ID le asigna el primer vínculo
 			if (string.IsNullOrEmpty(_id))
 			{
-				AtomLinksCollection objColLinks = Links.Search(AtomLink.AtomLinkType.Self);
+				AtomLinksCollection links = Links.Search(AtomLink.AtomLinkType.Self);
 
-					if (objColLinks.Count > 0)
-						_id = objColLinks[0].Href;
+					if (links.Count > 0)
+						_id = links[0].Href;
 			}
 			// Si no existe tampoco el primer vínculo le asigna el título
 			if (string.IsNullOrEmpty(_id))
@@ -73,22 +99,22 @@ public class AtomEntry : FeedEntryBase
 	/// <summary>
 	///		Vínculos
 	/// </summary>
-	public AtomLinksCollection Links { get; } = new();
+	public AtomLinksCollection Links { get; } = [];
 
 	/// <summary>
 	///		Autores
 	/// </summary>
-	public AtomPersonsCollection Authors { get; } = new();
+	public AtomPersonsCollection Authors { get; } = [];
 
 	/// <summary>
 	///		Contribuyentes
 	/// </summary>
-	public AtomPersonsCollection Contributors { get; } = new();
+	public AtomPersonsCollection Contributors { get; } = [];
 
 	/// <summary>
 	///		Categorías
 	/// </summary>
-	public AtomCategoriesCollection Categories { get; } = new();
+	public AtomCategoriesCollection Categories { get; } = [];
 
 	/// <summary>
 	///		Origen de la fuente

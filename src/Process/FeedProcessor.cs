@@ -69,9 +69,9 @@ public class FeedProcessor
 		// Carga el archivo RSS
 		try
 		{
-			RSSChannel rss = new RSSParser().Parse(fileML);
+			RSSChannel? rss = new RSSParser().Parse(fileML);
 
-				if (rss != null)
+				if (rss is not null)
 				{ 
 					// Obtiene el contenido codificado
 					ConvertEntriesRSS(rss);
