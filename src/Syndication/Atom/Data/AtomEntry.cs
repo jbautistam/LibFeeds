@@ -13,7 +13,7 @@ public class AtomEntry : FeedEntryBase
 	/// </summary>
 	public DateTime GetFirstDate()
 	{
-		DateTime date = DateTime.UtcNow.AddYears(-10);
+		DateTime date = DateTime.UtcNow.AddYears(10);
 
 			// Obtiene la fecha mínima
 			//date = GetMin(date, DateCreated);

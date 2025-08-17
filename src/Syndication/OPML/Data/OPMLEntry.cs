@@ -28,5 +28,5 @@ public class OPMLEntry : FeedEntryBase
 	/// <summary>
 	///		Entradas
 	/// </summary>
-	public OPMLEntriesCollection Entries { get; } = new();
+	public OPMLEntriesCollection Entries { get; } = [];
 }

@@ -8,7 +8,7 @@ public class OPMLChannel
 	/// <summary>
 	///		Título
 	/// </summary>
-	public string? Title { get; set; }
+	public string Title { get; set; } = default!;
 
 	/// <summary>
 	///		Fecha de creación
@@ -33,5 +33,5 @@ public class OPMLChannel
 	/// <summary>
 	///		Entradas del canal
 	/// </summary>
-	public OPMLEntriesCollection Entries { get; } = new();
+	public OPMLEntriesCollection Entries { get; } = [];
 }
